@@ -45,7 +45,7 @@ class TestBaseModel(unittest.TestCase):
         self.resetStorage()
         with self.assertRaises(TypeError) as e:
             BaseModel.__init__()
-        msg = "BaseModel.__init__() missing 1 required"\
+        msg = "BaseModel.__init__() missing 1 required "\
               "positional argument: 'self'"
         self.assertEqual(str(e.exception), msg)
 
@@ -125,7 +125,7 @@ class TestBaseModel(unittest.TestCase):
         self.resetStorage()
         with self.assertRaises(TypeError) as e:
             BaseModel.to_dict()
-        msg = "BaseModel.to_dict() missing 1 required"\
+        msg = "BaseModel.to_dict() missing 1 required "\
               "positional argument: 'self'"
         self.assertEqual(str(e.exception), msg)
 
@@ -134,7 +134,7 @@ class TestBaseModel(unittest.TestCase):
         self.resetStorage()
         with self.assertRaises(TypeError) as e:
             BaseModel.to_dict(self, 98)
-        msg = "BaseModel.to_dict() takes 1 positional"\
+        msg = "BaseModel.to_dict() takes 1 positional "\
               "argument but 2 were given"
         self.assertEqual(str(e.exception), msg)
 
